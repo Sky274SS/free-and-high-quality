@@ -19,7 +19,6 @@ const Portfolio = () => {
                         onClick={()=>{
                             isOpenChange()
                             setCurrentImage(index)
-
                         }}/>
                         <h1 className='h1'>{element.name}</h1>
                     </div>
