@@ -1,0 +1,179 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background: radial-gradient(#354a67, #151e27);
+    opacity: 0;
+    transition: 1s;
+    animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 106px;
+    height: 5vh;
+    color: white;
+    font-size: 25px;
+}
+.about-company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    color: white;
+    font-size: 20px;
+}
+.about-sold{
+    margin-top: 10vh;
+    justify-content: flex-start;
+    margin-left: 5vw;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.about-sold-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about-sold-info > h1{
+    margin: 3px 35vw;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.sold-image{
+display: flex;
+width: 30vw;
+height: 30vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+justify-content: center;
+align-items: flex-end;
+opacity: 0.7;
+}
+.newlyweds{
+    background-image: url('../images/sold-newlyweds.jpg');
+}
+.newcomers{
+    background-image: url('../images/sold-newcomers.jpg');
+}
+.pensioners{
+    background-image: url('../images/sold-pensioners.jpeg');
+}
+.about-repair{
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 15px;
+}
+.about-repair > h1{
+    font-size: 15px;
+    color: #fff;
+    margin-left: 30vw;
+    
+}
+.about-sold-info > div{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.397);
+    border-radius: 15px;
+}
+
+.about-information {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-size: 12px;
+    text-align: justify;
+}
+.about-hight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-hight > h1 {
+    color: white;
+    font-size: 25px;
+}
+.about-hight > div {
+    display: flex;
+}
+.about-block > div {
+    width: 20vw;
+    height: 25vh;
+    margin: 10px;
+    background-color: white;
+}
+.about-block > div:hover{
+background-color: black;
+}
+.about-end{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .about{
+        margin-top: 106px;
+        height: 6vh;
+        font-size: 35px;
+    }
+    .about-company{
+        font-size: 25px;
+    }
+    .about-information{
+        font-size: 15px;
+    }
+    .about-hight{
+     
+    }
+    .about-block{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about-block > div{
+        width: 40vw;
+        height: 20vh;
+    }
+    .about-sold-info{
+        flex-wrap: wrap;
+    }
+    .about-sold-info > div{
+        width: 55vw;
+        margin-bottom: 2vh;
+    }
+    .sold-image{
+        width: 55vw;
+    }
+    .about-repair > h1{
+        font-size: 10px;
+        margin-bottom: 1vh;
+    }
+    .sold-p{
+        font-size: 23px;
+    }
+}

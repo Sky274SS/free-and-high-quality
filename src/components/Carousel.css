@@ -1,0 +1,75 @@
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+}
+.modal-body {
+    padding: 2rem;
+    width: 50vw;
+    height: 70vh;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 1s;
+    animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    cursor: pointer;
+}
+.close {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.close > button {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.close > button:hover {
+    background-color: #ff7d7d;
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        padding-top: 4rem;
+    }
+    .modal-body {
+        padding: 2rem;
+        width: 90vw;
+        height: 50vh;
+        border-radius: 5px;
+        background: linear-gradient(220.16deg, #354a67 -8%, #151e27 108%);
+        box-shadow: 0 0 15px #ffffff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0;
+        transition: 1s;
+        animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
+        animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    }
+    .close > button {
+        background-color: #ffffff;
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+}

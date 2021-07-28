@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Отделка без всякой херни",
+    "cover": "https://talantstroy.ru/files/service/remont-otdelka/remont-otdelka-2.jpg",
+    "images": ["https://talantstroy.ru/files/service/remont-otdelka/remont-otdelka-2.jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  },
+  {
+    "name": "Отделка по стандарту",
+    "cover": "https://toremont.ru/1/photo-1[1].jpg",
+    "images": ["https://toremont.ru/1/photo-1[1].jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  },
+  {
+    "name": "Привет из configJS",
+    "cover": "https://stroy-dom-remont.ru/images/remont/101.jpg",
+    "images": ["https://stroy-dom-remont.ru/images/remont/101.jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  },
+  {
+    "name": "Отделка без всякой херни",
+    "cover": "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+    "images": ["https://stroy-dom-remont.ru/images/remont/101.jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  },
+  {
+    "name": "Отделка без всякой херни",
+    "cover": "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg",
+    "images": ["https://stroy-dom-remont.ru/images/remont/101.jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  },
+  {
+    "name": "Отделка без всякой херни",
+    "cover": "https://gigan.ru/foto_stati/vtor_2809.jpg",
+    "images": ["https://stroy-dom-remont.ru/images/remont/101.jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  },
+  {
+    "name": "Отделка без всякой херни",
+    "cover": "https://static.orgpage.ru/newsphotos/17/170214d63a52476aa3b580ff91559f70.jpg",
+    "images": ["https://stroy-dom-remont.ru/images/remont/101.jpg",
+      "https://www.masterovoi.ru/sites/default/files/master/8_2_0.jpg",
+      "https://pravchelny.ru/www/news/2021/4/1518515102896692.jpg"]
+  }
+
+]

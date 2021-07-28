@@ -1,0 +1,10 @@
+[
+  {
+    "img": "https://talantstroy.ru/files/service/remont-otdelka/remont-otdelka-2.jpg",
+    "subServices": ["Отделка стен", "Поклейка обоев / покраска стен", "Укладка линолиума / ламината", "Монтаж плинтуса"]
+  },
+  {
+    "img": "https://toremont.ru/1/photo-1[1].jpg",
+    "subServices": ["Отделка стен2", "Поклейка обоев / покраска стен", "Укладка линолиума / ламината", "Монтаж плинтуса"]
+  }
+]

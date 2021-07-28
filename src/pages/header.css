@@ -1,0 +1,92 @@
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(#354a67, #151e27);
+}
+
+.logo {
+
+    height: 5vh;
+    width: 5vw;
+    background: url('../images/logo.png') center no-repeat;
+    background-size: contain;
+}
+
+.ol {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    position: relative;
+    display: inline-flex;
+}
+
+.menu-item a {
+    position: relative;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 13px;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+a:hover {
+    opacity: 1;
+}
+/*Удалить*/
+.menu-item a:before {
+    display: block;
+    font-size: 34px;
+    transition: transform 189ms ease-out;
+}
+
+.menu-item a:hover:before {
+    animation: hoverEmoji 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+/*-----*/
+
+.ol > .menu-item:nth-of-type(1) > a:before {
+    content: url("../images/home.png");
+}
+
+.link {
+    display: flex;
+    cursor: default;
+}
+
+.link img:hover {
+    animation: hoverEmoji 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes hoverEmoji {
+    0% {
+        transform: scaleX(0.89) rotateX(-21deg) rotateZ(-8deg);
+    }
+    100% {
+        transform: rotateZ(-8deg);
+    }
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .header {
+        font-size: 30px;
+    }
+
+    .menu-item {
+        margin: 0 13px;
+    }
+}

@@ -1,0 +1,85 @@
+.area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 67px;
+  background: linear-gradient(220.16deg, #354a67 -8%, #151e27 108%);
+  opacity: 0;
+  transition: 1s;
+  animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
+  animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+.area > div {
+  display: flex;
+  flex-direction: column;
+}
+.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3vw;
+  color: white;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.img1 {
+  position: static;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 4vh;
+  margin-left: 2vw;
+  width: 25vw;
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.img1:hover {
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+
+
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  .area {
+    margin-top: 5vh;
+  }
+ 
+  .img1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 4vh;
+    margin-left: 2vw;
+    width: 45vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    /* background-image:url(../images/sold-newlyweds.jpg) ; */
+  }
+  .h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    color: white;
+  }
+
+
+  .h1 {
+    font-size:25px;
+  }
+}

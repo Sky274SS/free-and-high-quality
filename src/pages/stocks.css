@@ -1,0 +1,61 @@
+.stocks{
+margin-top: 106px;
+}
+.about-sold{
+    margin-top: 10vh;
+    justify-content: flex-start;
+    margin-left: 5vw;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.about-sold-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about-sold-info > h1{
+    margin: 3px 35vw;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.sold-image{
+    display: flex;
+    width: 30vw;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0.7;
+}
+.newlyweds{
+    background-image: url('../images/sold-newlyweds.jpg');
+}
+.newcomers{
+    background-image: url('../images/sold-newcomers.jpg');
+}
+.pensioners{
+    background-image: url('../images/sold-pensioners.jpeg');
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .about-sold-info{
+        flex-wrap: wrap;
+    }
+    .about-sold-info > div{
+        width: 55vw;
+        margin-bottom: 2vh;
+    }
+    .sold-image{
+        width: 55vw;
+    }
+
+    .sold-p{
+        font-size: 23px;
+    }
+}

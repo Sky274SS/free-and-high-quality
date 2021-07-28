@@ -1,0 +1,7 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: radial-gradient(#354a67, #151e27);
+}
