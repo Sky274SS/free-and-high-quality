@@ -6,21 +6,23 @@ const Carousel = ({images, isOpen, isOpenChange}) => {
     return (
         <div>
             {isOpen && <div className="modal">
+                <div className="modal-body">
+                    <div className="close">
+                        <button onClick={() => {
+                            isOpenChange()
+                            setCurrentImage(0)
+                        }}>x
+                        </button>
+                    </div>
+                    <img
+                        src={images[currentImage]}
+                        alt="portfolio-subImage"
+                        onClick={() => {
+                            setCurrentImage(currentImage => (currentImage + 1) % images.length)
+                        }}
+                    />
 
-                <img
-                    src={images[currentImage]}
-                    alt="portfolio-subImage"
-                    className="modal-body"
-                    onClick={()=>{setCurrentImage(currentImage => (currentImage + 1) % images.length)}}
-                />
-                <div className="close">
-                    <button onClick={() => {
-                        isOpenChange()
-                        setCurrentImage(0)
-                    }}>x
-                    </button>
                 </div>
-
             </div>}
 
         </div>

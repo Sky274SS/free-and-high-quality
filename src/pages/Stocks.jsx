@@ -1,23 +1,22 @@
 import React from 'react'
 import './stocks.css'
+import config from './stocks_config.json'
 
 const Stocks = () => {
+    const stocksElements = config
     return (
         <div className='stocks'>
-            <div className='about-sold'>Акции и спецпредложения</div>
-            <div className="about-sold-info">
-                <div>
-                    <div className="sold-image newlyweds"/>
-                    <p className="sold-p">Молодоженам</p>
-                </div>
-                <div>
-                    <div className="sold-image newcomers"/>
-                    <p className="sold-p">Новоселам</p>
-                </div>
-                <div>
-                    <div className="sold-image pensioners"/>
-                    <p className="sold-p">Пенсионерам</p>
-                </div>
+            <div className='stocks-sold'>Акции и спецпредложения</div>
+            <div className="stocks-sold-info">
+                {stocksElements.map((element,index)=>{
+                    return(
+                        <div>
+                            <img src={element.image} alt="stock_image" className="sold-image"/>
+                            <p className="sold-p">{element.name}</p>
+                            <p className="sold-text">{element.info}</p>
+                        </div>
+                    )
+                })}
             </div>
         </div>)
 }

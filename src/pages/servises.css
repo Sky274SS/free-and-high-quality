@@ -21,11 +21,16 @@
     color: rgb(255, 255, 255);
     padding-left: 2vw;
   }
+.sidebar > div > div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
   
-  .sidebar h1 {
+  .service-h1 {
     font-size: 1.3vw;
-    margin-bottom: 4vh;
-    padding-bottom: 2vh;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     margin-top: -30px;
     text-align: center;
   }
@@ -42,8 +47,8 @@
   
   .main-slide > div {
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
+    background-size: contain;
+    background-position: center ;
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -52,8 +57,12 @@
     animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
   }
   .main-slide > img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
     height: 100%;
     width: 100%;
+    cursor: pointer;
     animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
     animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
   }
@@ -72,6 +81,7 @@
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
     text-align: center;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -81,12 +91,13 @@
     transition: background-color 0.1s linear;
     border-radius: 5px;
     cursor: pointer;
-    padding: 5px 5vw;
   }
   .button {
     background-color: #dcedf8;
     border: 1px solid #525252;
     box-shadow: 0 0 5px #000000;
+    font-size: 40px;
+    padding: 0 50px;
   }
   .button:hover {
     background-color: #aaaaaa;
@@ -96,7 +107,7 @@
 
   @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     .servises{
-      flex-direction: column;
+      flex-direction: column-reverse;
       margin-top: 106px;
     }
     .sidebar{
@@ -104,18 +115,24 @@
       height: 250px;
     }
     .sidebar > div {
+      display: flex;
+      flex-direction: row;
       justify-content: flex-start;
-      align-items: center;
-      margin-top: 20px
+      align-items: flex-start;
+      margin-top: 20px;
+      margin-left: 40px;
       
     }
-    .sidebar > div > h1 {
+    .service-h1 {
+
       font-size: 30px;
       margin: 5px;
       padding: 0;
     }
     .button{
-      display: none;
+      margin-top: 100px;
+      margin-left: 150px;
+
     }
     .main-slide{
       width: 100vw;

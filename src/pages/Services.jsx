@@ -20,15 +20,19 @@ const Services = () => {
         <div className='servises'>
             <div className="sidebar">
                 <div>
-                    {currentService.subServices.map((subService, index) => <h1>{index + 1}. {subService}</h1>)}
-                    <button className='button' onClick={handleChangeImage}>ДАЛЕЕ</button>
+                    <div>
+                    {currentService.subServices.map((subService, index) => <h1 className='service-h1' key={index}>{index + 1}. {subService}</h1>)}
+                    </div>
+                    <button className='button' onClick={handleChangeImage}>→</button>
                 </div>
+
             </div>
             <div className='main-slide'>
                 <img
                     style={{display: hidden ? 'none' : 'block'}}
                     src={currentService.img}
                     alt={'service_image'}
+                    onClick={handleChangeImage}
                 />
             </div>
         </div>
