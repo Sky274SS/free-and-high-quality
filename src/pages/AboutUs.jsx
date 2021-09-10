@@ -34,7 +34,7 @@ const AboutUs = () => {
                 console.error(e);
                 setAboutElements(null);
             })
-    })
+    }, [])
     // console.log(aboutElements[0].action[0].image)
     return (
         <div className='about-container'>

@@ -25,7 +25,7 @@ const Portfolio = () => {
     //             console.error(e);
     //             setPortfolioElements(null);
     //         })
-    // })
+    // },[])
     const portfolioElements=config
 
     const isOpenChange = ()=>{

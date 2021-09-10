@@ -23,7 +23,7 @@ const Stocks = () => {
                 console.error(e);
                 setStocksElements(null);
             })
-    })
+    },[])
 
 
     // const stocksElements = config
