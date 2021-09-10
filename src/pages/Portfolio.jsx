@@ -1,11 +1,33 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import './portfolio.css';
 import config from './portfolio_config.json'
 import Carousel from "../components/Сarousel";
 
 const Portfolio = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const portfolioElements = config
+
+    // const defaultPortfolioElements =
+    //    [{
+    //        id: "",
+    //        name: "",
+    //        cover: "",
+    //        images: [],
+    //    }]
+    //
+    // const [portfolioElements,setPortfolioElements]=useState(defaultPortfolioElements)
+    // useEffect(()=>{
+    //     fetch(`portfolio_config.json`)
+    //         .then((response) => response.json())
+    //         .then((portfolioElements) => {
+    //             setPortfolioElements(portfolioElements);
+    //         })
+    //         .catch((e)=>{
+    //             console.error(e);
+    //             setPortfolioElements(null);
+    //         })
+    // })
+    const portfolioElements=config
+
     const isOpenChange = ()=>{
         setIsOpen(!isOpen)
     }

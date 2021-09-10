@@ -71,7 +71,22 @@ a:hover {
 .link img:hover {
     animation: hoverEmoji 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
-
+.call_header{
+    margin-top: 75px;
+    color: #ffffff;
+    margin-left: 75vw;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 0 10px #ffd400;
+    border-radius: 5px;
+    background: rgba(255, 231, 0, 0.4);
+    padding: 10px;
+    border: 1px solid rgba(255, 203, 0);
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fdd200;
+}
 @keyframes hoverEmoji {
     0% {
         transform: scaleX(0.89) rotateX(-21deg) rotateZ(-8deg);
@@ -88,5 +103,9 @@ a:hover {
 
     .menu-item {
         margin: 0 13px;
+    }
+    .call_header{
+        margin-top: 130px;
+        margin-left: 70vw;
     }
 }

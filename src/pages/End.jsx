@@ -1,16 +1,15 @@
-import React from 'react'
+import React,{useState}from 'react'
 
 const End = ()=>{
-
     return(
     <div className='end'>
         <div>
         <h1>Контакты:</h1>
-        <h1>8-918-628-09-77</h1>
-        <h1>kadetka274@gmail.com</h1>
+        <h1>8-953-107-07-77 - Владимир</h1>
+        <h1>finishingofapartments23@gmail.com</h1>
         </div>
         <div>
-            <h1>350000, г. Краснодар</h1>
+            <h1 className='call' >Мы ждем вашего звонка</h1>
         </div>
         <div>
         <h1>Сайт создан:</h1>

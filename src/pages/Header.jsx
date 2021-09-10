@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import "./header.css";
 import {NavLink} from "react-router-dom";
 
 const Header = () => {
-
+    const [call, setCall] = useState("ПОЗВОНИТЬ")
 
     return (
         <div className="header">
@@ -16,9 +16,9 @@ const Header = () => {
                     <li className="menu-item">
                         <NavLink to="services">Услуги</NavLink>
                     </li>
-                    <li className="menu-item">
-                        <NavLink to="Portfolio">Портфолио</NavLink>
-                    </li>
+                    {/*<li className="menu-item">*/}
+                    {/*    <NavLink to="Portfolio">Портфолио</NavLink>*/}
+                    {/*</li>*/}
                     <li className="menu-item">
                         <NavLink to="About us">О нас</NavLink>
                     </li>
@@ -27,11 +27,19 @@ const Header = () => {
                     </li>
                 </ol>
                 <div className="link">
-                    <a href="https://www.instagram.com/skymirs/" target="_blank" rel="noreferrer">
+                    <a href="https://www.instagram.com/remont_vsem_krasnodar/" target="_blank" rel="noreferrer">
                         <img src={'/images/inst.png'} alt={"instagram_logo"}/>
                     </a>
                 </div>
             </nav>
+            <div className='call_header' onClick={() => {
+                if (call === "ПОЗВОНИТЬ") {
+                    setCall("8-953-107-77-07")
+                } else {
+                    setCall('ПОЗВОНИТЬ')
+                }
+            }
+            }>{call}</div>
         </div>
     );
 };

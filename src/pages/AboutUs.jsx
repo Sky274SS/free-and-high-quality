@@ -1,7 +1,40 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './AboutUs.css';
-
+import config from './about.json'
 const AboutUs = () => {
+
+
+    const defaultAboutElements =
+        [{
+            action: [],
+            advantage: [],
+        }]
+    const defaultActionElements =
+        [{
+            image: "",
+            title: "",
+        }]
+    const defaultAdvantageElements =
+        ['']
+
+    const [aboutElements,setAboutElements]=useState(defaultAboutElements)
+    const [action,setAction]=useState(defaultActionElements)
+    const [advantage,setAdvantage]=useState(defaultAdvantageElements)
+
+    useEffect(()=>{
+        fetch(`http://84.38.183.60:8000/api/about/`)
+            .then((response) => response.json())
+            .then((aboutElements) => {
+                setAboutElements(aboutElements);
+                setAction(aboutElements[0].action)
+                setAdvantage(aboutElements[0].advantage)
+            })
+            .catch((e)=>{
+                console.error(e);
+                setAboutElements(null);
+            })
+    })
+    // console.log(aboutElements[0].action[0].image)
     return (
         <div className='about-container'>
             <div className='about'>
@@ -11,21 +44,24 @@ const AboutUs = () => {
 
             <div className='about-header'>Как проходит ремонт?</div>
             <div className="about-repair">
-                <h1>заказ</h1>
-                <h1>выезд</h1>
-                <h1>составление сметы</h1>
-                <h1>закупка материалов</h1>
-                <h1>работа</h1>
-                <h1>вывоз мусора</h1>
+                {action.map((element,index)=>{
+                    return(
+                        <div className="about_action" key={index}>
+                            <img src={element.image} alt="action_image"/>
+                            <h1>{element.title}</h1>
+                        </div>
+                    )
+                })}
             </div>
             <div className='about-header'>наши преимущества</div>
-            <div className="about-repair">
-                <h1>уменьшение сроков в 2 раза (за 10 лет работы наша команда научилась оптимизировать все процессы
-                    ремонта и отделки)</h1>
-                <h1>точный расчет материалов</h1>
-                <h1>работа без посредников (имеем в собственном арсенале все необходимое)</h1>
-                <h1>скидки на материалы (прямые контакты с поставщиками)</h1>
-                <h1>официальный договор </h1>
+            <div className="about-advantage">
+                {advantage.map((element,index)=>{
+                    return(
+                        <div key={index}>
+                            <h1>{element}</h1>
+                        </div>
+                    )
+                })}
             </div>
 
         </div>

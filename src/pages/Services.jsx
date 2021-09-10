@@ -1,40 +1,51 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import './servises.css';
 import config from './services_config.json'
 
 
 const Services = () => {
+    const [serviceList,setServiceList]=useState(0)
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
-    const [hidden, setHidden] = useState(false)
-    const currentService = config[currentServiceIndex]
+    // const [hidden, setHidden] = useState(false)
+    const defaultServices={
+        id:'',
+        img:''
+    }
+
+    const [currentService,setCurrentService]=useState(defaultServices)
+    useEffect(() => {
+        fetch(`http://84.38.183.60:8000/api/services/`)
+            .then((response) => response.json())
+            .then((serviceList) => {
+                setServiceList(serviceList);
+                setCurrentService(serviceList[currentServiceIndex])
+            })
+            .catch((e) => {
+                console.error(e);
+                setServiceList(null);
+            });
+    },[currentServiceIndex]);
+
 
     const handleChangeImage = () => {
-        setCurrentServiceIndex(currentServiceIndex => (currentServiceIndex + 1) % config.length)
-        setHidden(true)
-        setTimeout(() => {
-            setHidden(false)
-        }, 1)
+        setCurrentServiceIndex(currentServiceIndex => (currentServiceIndex + 1) % serviceList.length)
+        // setHidden(true)
+        // setTimeout(() => {
+        //     setHidden(false)
+        // }, 1)
     }
 
     return (
         <div className='servises'>
-            <div className="sidebar">
-                <div>
-                    <div>
-                    {currentService.subServices.map((subService, index) => <h1 className='service-h1' key={index}>{index + 1}. {subService}</h1>)}
-                    </div>
-                    <button className='button' onClick={handleChangeImage}>→</button>
-                </div>
-
-            </div>
             <div className='main-slide'>
                 <img
-                    style={{display: hidden ? 'none' : 'block'}}
+                    // style={{display: hidden ? 'none' : 'block'}}
                     src={currentService.img}
                     alt={'service_image'}
                     onClick={handleChangeImage}
                 />
             </div>
+            <h1 className='services-h1'>Ремонт квартир от эконом до элитного</h1>
         </div>
     )
 }
