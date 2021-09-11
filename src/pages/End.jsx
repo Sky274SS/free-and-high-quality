@@ -9,7 +9,7 @@ const End = ()=>{
         <h1>8-953-107-07-77 - Владимир</h1>
         <h1>finishingofapartments23@gmail.com</h1>
         </div>
-        <div>
+        <div >
             <FeedBack/>
         </div>
         <div>

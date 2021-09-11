@@ -94,4 +94,8 @@ background: rgba(0, 0, 0, 0.3);
         padding: 10px 30px;
         font-size: 20px;
     }
+    .call{
+        padding: 30px 15px;
+        font-size: 25px;
+    }
 }
