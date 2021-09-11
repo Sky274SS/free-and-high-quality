@@ -37,7 +37,7 @@ const FeedBack = () => {
                             console.log(newRequest)
                             if((name && name.trim()) &&(description && description.trim())&&(number && number.trim()))
                             {
-                                fetch('http://localhost:8000/api/requests/', {
+                                fetch('https://otdelka-krd.ru/api/requests/', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json;charset=utf-8'

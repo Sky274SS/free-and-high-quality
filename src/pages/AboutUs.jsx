@@ -31,7 +31,7 @@ const AboutUs = () => {
             })
     }, [])
     useEffect(() => {
-        fetch('http://localhost:8000/api/advantage/')
+        fetch('https://otdelka-krd.ru/api/advantage/')
             .then((response) => response.json())
             .then((advantageElements) => {
                 setAdvantage(advantageElements)
