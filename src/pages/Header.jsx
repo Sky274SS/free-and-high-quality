@@ -11,7 +11,7 @@ const Header = () => {
                 <div className="logo"/>
                 <ol className="ol">
                     <li className="menu-item">
-                        <NavLink to="/Home"/>
+                        <NavLink to="/home"/>
                     </li>
                     <li className="menu-item">
                         <NavLink to="services">Услуги</NavLink>
@@ -20,10 +20,10 @@ const Header = () => {
                     {/*    <NavLink to="Portfolio">Портфолио</NavLink>*/}
                     {/*</li>*/}
                     <li className="menu-item">
-                        <NavLink to="About us">О нас</NavLink>
+                        <NavLink to="about_us">О нас</NavLink>
                     </li>
                     <li className="menu-item">
-                        <NavLink to="Stocks">Акции</NavLink>
+                        <NavLink to="stocks">Акции</NavLink>
                     </li>
                 </ol>
                 <div className="link">

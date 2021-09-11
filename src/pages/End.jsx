@@ -1,4 +1,5 @@
 import React,{useState}from 'react'
+import FeedBack from "../feedback/FeedBack";
 
 const End = ()=>{
     return(
@@ -9,7 +10,7 @@ const End = ()=>{
         <h1>finishingofapartments23@gmail.com</h1>
         </div>
         <div>
-            <h1 className='call' >Мы ждем вашего звонка</h1>
+            <FeedBack/>
         </div>
         <div>
         <h1>Сайт создан:</h1>

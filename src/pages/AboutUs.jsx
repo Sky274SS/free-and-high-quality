@@ -5,36 +5,43 @@ import config from './about.json'
 const AboutUs = () => {
 
 
-    const defaultAboutElements =
-        [{
-            action: [],
-            advantage: [],
-        }]
     const defaultActionElements =
         [{
             image: "",
             title: "",
         }]
     const defaultAdvantageElements =
-        ['']
+        [{
+            img: "",
+            title: "",
+            description: "",
+        }]
 
-    const [aboutElements, setAboutElements] = useState(defaultAboutElements)
     const [action, setAction] = useState(defaultActionElements)
     const [advantage, setAdvantage] = useState(defaultAdvantageElements)
-
     useEffect(() => {
-        fetch(`https://otdelka-krd.ru/api/about/`)
+        fetch('http://localhost:8000/api/action/')
             .then((response) => response.json())
-            .then((aboutElements) => {
-                setAboutElements(aboutElements);
-                setAction(aboutElements[0].action)
-                setAdvantage(aboutElements[0].advantage)
+            .then((actionElements) => {
+                setAction(actionElements)
             })
             .catch((e) => {
                 console.error(e);
-                setAboutElements(null);
+                setAction(null);
             })
     }, [])
+    useEffect(() => {
+        fetch('http://localhost:8000/api/advantage/')
+            .then((response) => response.json())
+            .then((advantageElements) => {
+                setAdvantage(advantageElements)
+            })
+            .catch((e) => {
+                console.error(e);
+                setAdvantage(null);
+            })
+    }, [])
+
     // console.log(aboutElements[0].action[0].image)
     return (
         <div className='about-container'>
@@ -47,8 +54,12 @@ const AboutUs = () => {
             <div className="about-advantage">
                 {advantage.map((element, index) => {
                     return (
-                        <div key={index}>
-                            <h1>{element}</h1>
+                        <div key={index} className="about-advantage-container">
+                            <div className="about-advantage-info">
+                                <h1>{element.title}</h1>
+                                <p>{element.description}</p>
+                            </div>
+                            <img src={element.img} alt="img" className="about-advantage-image"/>
                         </div>
                     )
                 })}
