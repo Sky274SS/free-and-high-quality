@@ -18,6 +18,7 @@ background: rgba(0, 0, 0, 0.3);
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 6rem;
 }
 .modalBody {
@@ -49,6 +50,7 @@ background: rgba(0, 0, 0, 0.3);
 .formContainer>label{
     color:#ffffff;
     font-size: 20px;
+    text-align: center;
 }
 .formContainer>input{
     padding: 10px 30px;
