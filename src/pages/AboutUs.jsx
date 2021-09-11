@@ -20,7 +20,7 @@ const AboutUs = () => {
     const [action, setAction] = useState(defaultActionElements)
     const [advantage, setAdvantage] = useState(defaultAdvantageElements)
     useEffect(() => {
-        fetch('http://localhost:8000/api/action/')
+        fetch('https://otdelka-krd.ru/api/action/')
             .then((response) => response.json())
             .then((actionElements) => {
                 setAction(actionElements)
