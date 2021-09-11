@@ -14,7 +14,7 @@ const Services = () => {
 
     const [currentService,setCurrentService]=useState(defaultServices)
     useEffect(() => {
-        fetch(`http://84.38.183.60:8000/api/services/`)
+        fetch(`https://otdelka-krd.ru/api/services/`)
             .then((response) => response.json())
             .then((serviceList) => {
                 setServiceList(serviceList);

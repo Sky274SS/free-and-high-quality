@@ -23,7 +23,7 @@ const AboutUs = () => {
     const [advantage, setAdvantage] = useState(defaultAdvantageElements)
 
     useEffect(() => {
-        fetch(`http://84.38.183.60:8000/api/about/`)
+        fetch(`https://otdelka-krd.ru/api/about/`)
             .then((response) => response.json())
             .then((aboutElements) => {
                 setAboutElements(aboutElements);

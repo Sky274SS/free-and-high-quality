@@ -14,7 +14,7 @@ const Stocks = () => {
     const [stocksElements,setStocksElements]=useState(defaultStocksElements)
 
     useEffect(()=>{
-        fetch(`http://84.38.183.60:8000/api/stocks/`)
+        fetch(`https://otdelka-krd.ru/api/stocks/`)
             .then((response) => response.json())
             .then((stocksElements) => {
                 setStocksElements(stocksElements);
