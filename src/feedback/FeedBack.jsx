@@ -11,7 +11,7 @@ const FeedBack = () => {
             <div className={classes.call} onClick={() => {
                 setIsOpen(true)
             }}>
-                Отправить заявку или задать вопрос
+                Получить консультацию
             </div>
             {isOpen && <div className={classes.modal}>
                 <div className={classes.modalBody}>

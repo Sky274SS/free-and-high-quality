@@ -87,6 +87,10 @@ a:hover {
     font-weight: bold;
     text-shadow: 0 0 10px #fdd200;
 }
+.call_header:hover{
+    background: rgba(255, 231, 0);
+    color: #000000;
+}
 @keyframes hoverEmoji {
     0% {
         transform: scaleX(0.89) rotateX(-21deg) rotateZ(-8deg);

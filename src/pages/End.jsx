@@ -10,7 +10,7 @@ const End = ()=>{
         <h1>finishingofapartments23@gmail.com</h1>
         </div>
         <div >
-            <FeedBack/>
+
         </div>
         <div>
         <h1>Сайт создан:</h1>

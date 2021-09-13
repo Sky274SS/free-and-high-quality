@@ -1,5 +1,5 @@
 .stocks{
-margin-top: 106px;
+margin-top: 156px;
 }
 .stocks-sold{
     margin-left: 20px;
@@ -8,6 +8,7 @@ margin-top: 106px;
     font-size: 25px;
     font-weight: 800;
     text-transform: uppercase;
+
     margin-bottom: 20px;
 }
 .stocks-sold-info{

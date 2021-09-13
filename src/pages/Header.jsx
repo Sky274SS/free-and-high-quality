@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./header.css";
 import {NavLink} from "react-router-dom";
+import FeedBack from "../feedback/FeedBack";
 
 const Header = () => {
     const [call, setCall] = useState("ПОЗВОНИТЬ")
@@ -40,7 +41,9 @@ const Header = () => {
                 }
             }
             }>{call}</div>
+            <FeedBack/>
         </div>
+
     );
 };
 
