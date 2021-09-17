@@ -8,7 +8,7 @@ margin-top: 156px;
     font-size: 25px;
     font-weight: 800;
     text-transform: uppercase;
-
+letter-spacing: 6px;
     margin-bottom: 20px;
 }
 .stocks-sold-info{
@@ -39,6 +39,8 @@ margin-top: 156px;
     color: #ffffff;
     font-size: 30px;
     text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 700;
 }
 .sold-text{
     padding: 40px 100px;
@@ -52,7 +54,7 @@ margin-top: 156px;
 }
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     .stocks{
-        margin-top: 140px;
+        margin-top: 208px;
     }
     .stocks-sold{
         font-size: 40px;

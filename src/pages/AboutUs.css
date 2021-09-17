@@ -26,6 +26,8 @@
     height: 5vh;
     color: white;
     font-size: 25px;
+    letter-spacing: 10px;
+    font-weight: 700;
 }
 
 .about-company {
@@ -35,16 +37,18 @@
     height: 5vh;
     color: white;
     font-size: 20px;
+    letter-spacing: 5px;
 }
 
 .about-header {
-    margin-top: 10vh;
+    margin-top: 50px;
     justify-content: flex-start;
     margin-left: 5vw;
     color: white;
     font-size: 25px;
     font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .about-repair {
@@ -114,7 +118,7 @@
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     .about {
-        margin-top: 106px;
+        margin-top: 185px;
         height: 6vh;
         font-size: 50px;
     }
@@ -122,6 +126,7 @@
     .about-company {
         font-size: 40px;
         text-align: center;
+        letter-spacing: 10px;
     }
 
     .about-information {
@@ -130,6 +135,10 @@
 
     .about_action {
         width: 500px;
+    }
+    .about-header {
+        font-size: 40px;
+        letter-spacing: 10px;
     }
 
 }

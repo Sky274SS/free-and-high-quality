@@ -20,12 +20,13 @@
     color: #000000;
 }
 .modal{
+    z-index: 1;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(21,30,39, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +38,9 @@
     padding: 2rem;
     width: 50vw;
     height: 70vh;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 15px #000000;
+    border-radius: 40px;
+    background: rgba(53,74,103,0.6);
+    box-shadow: 0 0 15px rgb(21,30,39);
 
 }
 .modalBodyTitle{
@@ -64,23 +65,44 @@
 .formContainer>input{
     padding: 10px 30px;
     margin: 20px 0;
-    border-radius: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: rgb(21,30,39);
+    color: #fff;
 }
 .formContainer>select{
     padding: 10px 30px;
     margin-bottom: 20px;
+    background: rgb(21,30,39);
+    color: #fff;
+    outline: none;
+    border: none;
 }
 .formContainer>textarea{
     margin-top: 20px;
     width: 400px;
     height: 100px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: rgb(21,30,39);
+    color: #fff;
 }
 .button{
     margin: 15px 0 0 0;
-    padding: 5px 20px ;
+    padding: 10px 20px ;
     cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: rgb(21,30,39);
+    color: #fff;
+}
+.button:hover{
+    background: #fff;
+    color: rgb(21,30,39);
 }
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     .modal {
@@ -88,6 +110,7 @@
     }
     .modalBody {
         width: 80vw;
+        height: 50vh;
     }
     .formContainer>label{
         color:#ffffff;
