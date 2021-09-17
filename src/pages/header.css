@@ -53,6 +53,7 @@ a:hover {
 .is_active{
     color: #fff;
     opacity: 1;
+
 }
 /*Удалить*/
 .menu-item a:before {
