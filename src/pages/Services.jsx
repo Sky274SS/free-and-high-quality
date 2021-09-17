@@ -45,7 +45,7 @@ const Services = () => {
                     onClick={handleChangeImage}
                 />
             </div>
-            <h1 className='services-h1'>Ремонт квартир от эконом до элитного</h1>
+            <h1 className='services-h1'>Ремонт квартир под ключ от эконом до элитного</h1>
         </div>
     )
 }
