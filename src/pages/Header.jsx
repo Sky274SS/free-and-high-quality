@@ -15,16 +15,16 @@ const Header = () => {
                         <NavLink to="/home"/>
                     </li>
                     <li className="menu-item">
-                        <NavLink to="services">Услуги</NavLink>
+                        <NavLink to="services" activeClassName='is_active'>Услуги</NavLink>
                     </li>
                     {/*<li className="menu-item">*/}
                     {/*    <NavLink to="Portfolio">Портфолио</NavLink>*/}
                     {/*</li>*/}
                     <li className="menu-item">
-                        <NavLink to="about_us">О нас</NavLink>
+                        <NavLink to="about_us" activeClassName='is_active'>О нас</NavLink>
                     </li>
                     <li className="menu-item">
-                        <NavLink to="stocks">Акции</NavLink>
+                        <NavLink to="stocks" activeClassName='is_active'>Акции</NavLink>
                     </li>
                 </ol>
                 <div className="link">

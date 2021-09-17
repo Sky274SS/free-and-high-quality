@@ -48,6 +48,10 @@ a {
 }
 
 a:hover {
+    text-decoration: underline;
+}
+.is_active{
+    color: #fff;
     opacity: 1;
 }
 /*Удалить*/

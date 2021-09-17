@@ -4,48 +4,37 @@ import config from './services_config.json'
 
 
 const Services = () => {
-    const [serviceList,setServiceList]=useState(0)
-    const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
-    // const [hidden, setHidden] = useState(false)
-    const defaultServices={
+    const defaultServices=[{
         id:'',
         img:''
-    }
+    }]
+    const [serviceList,setServiceList]=useState(defaultServices)
 
-    const [currentService,setCurrentService]=useState(defaultServices)
+
     useEffect(() => {
         fetch(`https://otdelka-krd.ru/api/services/`)
             .then((response) => response.json())
             .then((serviceList) => {
                 setServiceList(serviceList);
-                setCurrentService(serviceList[currentServiceIndex])
             })
             .catch((e) => {
                 console.error(e);
                 setServiceList(null);
             });
-    },[currentServiceIndex]);
-
-
-    const handleChangeImage = () => {
-        setCurrentServiceIndex(currentServiceIndex => (currentServiceIndex + 1) % serviceList.length)
-        // setHidden(true)
-        // setTimeout(() => {
-        //     setHidden(false)
-        // }, 1)
-    }
+    },[]);
 
     return (
-        <div className='servises'>
-            <div className='main-slide'>
-                <img
-                    // style={{display: hidden ? 'none' : 'block'}}
-                    src={currentService.img}
-                    alt={'service_image'}
-                    onClick={handleChangeImage}
-                />
-            </div>
-            <h1 className='services-h1'>Ремонт квартир под ключ от эконом до элитного</h1>
+        <div className='services'>
+            <div className="services_title">Ремонт квартир под ключ от эконом до элитных</div>
+            <div className="service_block">
+            {serviceList.map((element) => {
+                    return (
+
+                            <img key={element.id}  src={element.img} alt="stock_image" className="service_img"/>
+
+                    )
+                })}
+                        </div>
         </div>
     )
 }
