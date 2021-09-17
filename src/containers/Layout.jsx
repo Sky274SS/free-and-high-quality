@@ -7,9 +7,9 @@ const Layout = ({children}) => {
     return (
         <section className='container'>
             <Header/>
-            <div className='content'>
+            <main className='content'>
                 {children}
-            </div>
+            </main>
             <End/>
         </section>
     )
