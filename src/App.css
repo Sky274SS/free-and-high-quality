@@ -131,6 +131,9 @@ justify-content: space-between;
         text-align: center;
         letter-spacing: 2px;
     }
+    .footer_top{
+        flex-direction: column;
+    }
     .footer_middle{
         flex-direction: row;
     }
